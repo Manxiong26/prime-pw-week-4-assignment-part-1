@@ -53,28 +53,40 @@ function isPositive( number ) {
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
-
+console.log( 'isPositive - should say true', isPositive(4));
+console.log( 'isPositive - should say false', isPositive(-5));
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
-
+  let last = array[array.length - 1];
 }
-
+console.log('in getLast', getLast([3]));
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find( value, array ){
-
+  for (let v = 0; v < array.length; v++){
+    if (array[v] === value){
+    return true;
+  }
 }
-
+    return false;
+  }
+console.log('value is found', find(3, [1, 6, 7, 9]));
+console.log('value is found', find(5, [4, 5, 7, 8, 9]));
 // ----------------------
 // Stretch Goals
 // ----------------------
 // 8. Function to check if a letter is the first letter in a
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+if ( string [0] === letter){
+  return true;
+}
+  {
+ return false;
+  }
 }
 console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
@@ -82,10 +94,14 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 // 9. Function to return the sum of all numbers in an array
 function sumAll( ) {
   let sum = 0
+  let index = 0
   // TODO: loop to add items
+while(index < sumAll.length){
+  if(sumAll[index] > 0)
   return sum;
+  console.log(sumAll(5, [9, 9]));
 }
-
+}
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
