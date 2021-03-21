@@ -10,7 +10,7 @@ function hello() {
   return 'Hello World!';
 }
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
+console.log('Test - should say "Hello World!"', hello());// tested function to see if it will log the function hello, which it did.
 
 
 // 2. Function to return an personalized hello, for example 'Hello, Jo!'
@@ -41,7 +41,7 @@ function multiplyThree( firstNumber, secondNumber, thirdNumber){
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   console.log('in isPositive');
-  if ( number > 0 ){
+  if ( number > 0 ){//I'm using the If statment syntax to check if the number is positive
     return true;
   }
   else{
@@ -53,15 +53,15 @@ function isPositive( number ) {
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
-console.log( 'isPositive - should say true', isPositive(4));
-console.log( 'isPositive - should say false', isPositive(-5));
+console.log( 'isPositive - should say true', isPositive(4));// testing if the function will log correctly
+console.log( 'isPositive - should say false', isPositive(-5));//testing if the function will log correctly
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
-  let last = array[array.length - 1];
+  let last = array[array.length-1];// used array.legth-1 to get the last array
 }
-console.log('in getLast', getLast([3]));
+console.log('in getLast', getLast([3]));// tested 3 to see
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
