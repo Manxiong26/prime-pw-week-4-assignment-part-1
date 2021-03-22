@@ -92,25 +92,41 @@ console.log( 'isFirstLetter - should say true', isFirstLetter('a', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-let array = [1, 2, 3];
-let sum = 0;
-function sumAll(array) {
+let array = [1, 2, 3];//created an array with 3 numbers
+let sum = 0;// set the variable sum to zero
+function sumAll(array) {//created the funtction sumAll
 
   // TODO: loop to add items
-  for ( let i=0; i<array.length; i++){
-  sum = sum + array[i];
+  for ( let i=0; i<array.length; i++){// used a for loop
+  sum = sum + array[i];// set sum to eaqul sum plus array's index
   }
-  return sum;
+  return sum;// then return the sum
 }
 
-console.log(sumAll(array));
+console.log('sumAll should log 6', sumAll(array));//logging the array 
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
-
-
-
+function checkPositiveNumber(number){
+let newArray = [];// created an empty array
+  if(number > 0){//decided to go with an if else condition, so if number is greater than 0
+    newArray.push(number);//then push the number into array
+    return newArray;// then return it into the new array with positive numbers
+  } else {
+    return newArray;// otherwise just just return the newarray empty
+  }
+}
+checkPositiveNumber();
+console.log(checkPositiveNumber(1));//tested with a positive number
+console.log(checkPositiveNumber(-1));//tested with a negative number
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+// picked a problem from Edabit. The problem is to return the first element in an array.
+function getFirstValue(arr) {// first i creted a function called getFirstValue
+	return arr[0];// then i return array using 0 to get the first element of that array because the first element is counted as 0.
+}
+console.log('getFirstValue should be 1', getFirstValue([1, 3, 5, 6]));// testing if the function works
+console.log('getFirstValue should be 5', getFirstValue([5, 6, 7, 8]));//testing if the function works
