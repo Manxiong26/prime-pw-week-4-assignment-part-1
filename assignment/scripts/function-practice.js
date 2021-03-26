@@ -60,8 +60,16 @@ console.log( 'isPositive - should say false', isPositive(-5));//testing if the f
 //    array is empty, return `undefined`.
 function getLast( array ) {
   let last = array[array.length-1];// used array.legth-1 to get the last array
+  if (array.length === 0){
+    return undefined;
+  } else {
+    return last;
+  }
 }
-console.log('in getLast', getLast([3]));// tested 3 to see
+let testArray = ['Popcorn', 'chicken wings', 'chocolate hearts', 'Ring pop'];
+let secondTestArray = [];
+console.log('in getLast should say Ring pop', getLast(testArray));// tested if the code will log Ring pop.
+console.log('in getLast should say undefined', getLast(secondTestArray));//tested to see if the function will log undefined if no is in the array.
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
@@ -83,8 +91,7 @@ console.log('value is found', find(5, [4, 5, 7, 8, 9]));
 function isFirstLetter(letter, string) {
 if ( string [0] === letter){
   return true;
-}
-  {
+} else {
  return false;
   }
 }
@@ -98,12 +105,12 @@ function sumAll(array) {//created the funtction sumAll
 
   // TODO: loop to add items
   for ( let i=0; i<array.length; i++){// used a for loop
-  sum = sum + array[i];// set sum to eaqul sum plus array's index
+  sum += array[i];// set sum to eaqul sum plus array's index
   }
   return sum;// then return the sum
 }
 
-console.log('sumAll should log 6', sumAll(array));//logging the array 
+console.log('sumAll should log 6', sumAll(array));//logging the array
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
